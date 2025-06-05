@@ -1,3 +1,4 @@
+import 'package:caply/components/buttons/icon_btn.dart';
 import 'package:caply/components/buttons/primary_button.dart';
 import 'package:flutter/material.dart';
 
@@ -13,12 +14,20 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: PrimaryButton(
-            onClick: () {
-              print("Hola mundo");
-            },
-            label: "Soy un Botón!!",
-            icon: Icons.add,
+          child: Column(
+            children: [
+              Spacer(),
+              PrimaryButton(
+                onClick: () {
+                  print("Hola mundo");
+                },
+                label: "Soy un Botón!!",
+                icon: Icons.add,
+              ),
+              SizedBox(height: 16),
+              IconBtn(onClick: () {}, icon: Icons.more_vert),
+              Spacer(),
+            ],
           ),
         ),
       ),
