@@ -20,8 +20,6 @@ class MainApp extends StatelessWidget {
           child: Column(
             children: [
               Spacer(),
-              H1(label: "Título H1"),
-              SizedBox(height: 16),
               H2(label: "Título H2"),
               SizedBox(height: 16),
               H3(label: "Título H3"),
