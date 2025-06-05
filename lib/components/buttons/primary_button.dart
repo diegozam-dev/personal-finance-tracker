@@ -33,12 +33,14 @@ class _PrimaryButtonState extends State<PrimaryButton> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              widget.icon,
-              size: AppIconSizes.large,
-              color: AppColors.primaryBtnLabel,
-            ),
-            SizedBox(width: 8),
+            widget.icon == null
+                ? Text('')
+                : Icon(
+                    widget.icon,
+                    size: AppIconSizes.large,
+                    color: AppColors.primaryBtnLabel,
+                  ),
+            widget.icon == null ? SizedBox(width: 0) : SizedBox(width: 8),
             Text(
               widget.label,
               style: TextStyle(
