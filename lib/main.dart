@@ -1,5 +1,8 @@
 import 'package:caply/components/buttons/icon_btn.dart';
 import 'package:caply/components/buttons/primary_button.dart';
+import 'package:caply/components/headings/h1.dart';
+import 'package:caply/components/headings/h2.dart';
+import 'package:caply/components/headings/h3.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,6 +20,12 @@ class MainApp extends StatelessWidget {
           child: Column(
             children: [
               Spacer(),
+              H1(label: "Título H1"),
+              SizedBox(height: 16),
+              H2(label: "Título H2"),
+              SizedBox(height: 16),
+              H3(label: "Título H3"),
+              SizedBox(height: 16),
               PrimaryButton(
                 onClick: () {
                   print("Hola mundo");
