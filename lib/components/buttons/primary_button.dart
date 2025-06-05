@@ -44,7 +44,7 @@ class _PrimaryButtonState extends State<PrimaryButton> {
               style: TextStyle(
                 color: AppColors.primaryBtnLabel,
                 fontWeight: FontWeight.bold,
-                fontSize: AppTextSizes.txt16,
+                fontSize: AppTextSizes.medium,
               ),
             ),
           ],
