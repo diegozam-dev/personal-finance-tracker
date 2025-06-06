@@ -26,18 +26,17 @@ class _IconBtnState extends State<IconBtn> {
       width: 52,
       child: IconButton(
         onPressed: widget.onClick,
-        icon: Icon(
-          widget.icon,
-          size: AppIconSizes.large,
-          color: widget.isContrast == null || widget.isContrast == false
-              ? AppColors.iconBtnLabel
-              : AppColors.iconBtnLabelContrast,
-        ),
+        icon: Icon(widget.icon, size: AppIconSizes.large),
         style: ButtonStyle(
           backgroundColor: WidgetStatePropertyAll(
             widget.isContrast == null || widget.isContrast == false
                 ? AppColors.iconBtnDefault
                 : AppColors.iconBtnContrast,
+          ),
+          foregroundColor: WidgetStatePropertyAll(
+            widget.isContrast == null || widget.isContrast == false
+                ? AppColors.iconBtnLabel
+                : AppColors.iconBtnLabelContrast,
           ),
         ),
       ),

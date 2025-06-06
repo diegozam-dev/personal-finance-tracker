@@ -29,22 +29,18 @@ class _PrimaryButtonState extends State<PrimaryButton> {
         onPressed: widget.onClick,
         style: ButtonStyle(
           backgroundColor: WidgetStateProperty.all(AppColors.primaryBtnDefault),
+          foregroundColor: WidgetStatePropertyAll(AppColors.primaryBtnLabel),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             widget.icon == null
                 ? Text('')
-                : Icon(
-                    widget.icon,
-                    size: AppIconSizes.large,
-                    color: AppColors.primaryBtnLabel,
-                  ),
+                : Icon(widget.icon, size: AppIconSizes.large),
             widget.icon == null ? SizedBox(width: 0) : SizedBox(width: 8),
             Text(
               widget.label,
               style: TextStyle(
-                color: AppColors.primaryBtnLabel,
                 fontWeight: FontWeight.bold,
                 fontSize: AppTextSizes.medium,
               ),
