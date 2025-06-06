@@ -21,4 +21,8 @@ class AppColors {
   static const Color iconBtnContrast = white;
   static const Color iconBtnLabel = white;
   static const Color iconBtnLabelContrast = black;
+
+  // See All Button
+  static const Color seeAllBtnDefault = white;
+  static const Color seeAllBtnLabel = primary;
 }

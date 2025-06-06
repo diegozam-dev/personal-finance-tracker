@@ -1,5 +1,6 @@
 import 'package:caply/components/buttons/icon_btn.dart';
 import 'package:caply/components/buttons/primary_button.dart';
+import 'package:caply/components/buttons/see_all_btn.dart';
 import 'package:caply/components/headings/h1.dart';
 import 'package:caply/components/headings/h2.dart';
 import 'package:caply/components/headings/h3.dart';
@@ -33,6 +34,8 @@ class MainApp extends StatelessWidget {
               ),
               SizedBox(height: 16),
               IconBtn(onClick: () {}, icon: Icons.more_vert),
+              SizedBox(height: 16),
+              SeeAllBtn(),
               Spacer(),
             ],
           ),
