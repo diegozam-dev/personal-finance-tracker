@@ -12,7 +12,6 @@ class SeeAllBtn extends StatelessWidget {
         onPressed: () {},
         style: ButtonStyle(
           foregroundColor: WidgetStatePropertyAll(AppColors.seeAllBtnLabel),
-          backgroundColor: WidgetStatePropertyAll(AppColors.seeAllBtnDefault),
         ),
         child: Row(
           children: [
