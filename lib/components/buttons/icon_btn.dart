@@ -2,7 +2,7 @@ import 'package:caply/utils/app_colors.dart';
 import 'package:caply/utils/app_icon_sizes.dart';
 import 'package:flutter/material.dart';
 
-class IconBtn extends StatefulWidget {
+class IconBtn extends StatelessWidget {
   final Function() onClick;
   final IconData icon;
   final bool? isContrast;
@@ -15,26 +15,21 @@ class IconBtn extends StatefulWidget {
   });
 
   @override
-  State<IconBtn> createState() => _IconBtnState();
-}
-
-class _IconBtnState extends State<IconBtn> {
-  @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 52,
       width: 52,
       child: IconButton(
-        onPressed: widget.onClick,
-        icon: Icon(widget.icon, size: AppIconSizes.large),
+        onPressed: onClick,
+        icon: Icon(icon, size: AppIconSizes.large),
         style: ButtonStyle(
           backgroundColor: WidgetStatePropertyAll(
-            widget.isContrast == null || widget.isContrast == false
+            isContrast == null || isContrast == false
                 ? AppColors.iconBtnDefault
                 : AppColors.iconBtnContrast,
           ),
           foregroundColor: WidgetStatePropertyAll(
-            widget.isContrast == null || widget.isContrast == false
+            isContrast == null || isContrast == false
                 ? AppColors.iconBtnLabel
                 : AppColors.iconBtnLabelContrast,
           ),
