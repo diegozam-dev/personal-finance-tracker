@@ -4,6 +4,7 @@ import 'package:caply/components/buttons/see_all_btn.dart';
 import 'package:caply/components/headings/h1.dart';
 import 'package:caply/components/headings/h2.dart';
 import 'package:caply/components/headings/h3.dart';
+import 'package:caply/components/transaction/transaction.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -36,6 +37,8 @@ class MainApp extends StatelessWidget {
               IconBtn(onClick: () {}, icon: Icons.more_vert),
               SizedBox(height: 16),
               SeeAllBtn(),
+              SizedBox(height: 16),
+              Transaction(),
               Spacer(),
             ],
           ),
