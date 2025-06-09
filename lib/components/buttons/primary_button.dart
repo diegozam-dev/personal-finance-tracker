@@ -20,7 +20,7 @@ class PrimaryButton extends StatelessWidget {
     return SizedBox(
       height: 52,
       width: double.infinity,
-      child: ElevatedButton(
+      child: FilledButton(
         onPressed: onClick,
         style: ButtonStyle(
           backgroundColor: WidgetStateProperty.all(AppColors.primaryBtnDefault),
