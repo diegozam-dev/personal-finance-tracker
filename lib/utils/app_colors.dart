@@ -42,6 +42,7 @@ class AppColors {
   // Text
   static const Color textPrimary = black;
   static const Color textContrast = white;
+  static const Color textLight = gray9;
 
   // Primary Button
   static const Color primaryBtnDefault = primary;
