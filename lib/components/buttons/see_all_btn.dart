@@ -15,7 +15,13 @@ class SeeAllBtn extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Text("See all", style: TextStyle(fontSize: AppTextSizes.small)),
+            Text(
+              "See all",
+              style: TextStyle(
+                fontSize: AppTextSizes.small,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
             SizedBox(width: 8),
             Icon(Icons.arrow_forward),
           ],

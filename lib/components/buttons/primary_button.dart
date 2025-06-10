@@ -34,7 +34,7 @@ class PrimaryButton extends StatelessWidget {
             Text(
               label,
               style: TextStyle(
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w900,
                 fontSize: AppTextSizes.medium,
               ),
             ),
