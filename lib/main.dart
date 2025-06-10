@@ -20,27 +20,7 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: Column(
-            children: [
-              Spacer(),
-              H2(label: "Título H2"),
-              SizedBox(height: 16),
-              H3(label: "Título H3"),
-              SizedBox(height: 16),
-              PrimaryButton(
-                onClick: () {
-                  print("Hola mundo");
-                },
-                label: "Soy un Botón!!",
-                icon: Icons.add,
-              ),
-              SizedBox(height: 16),
-              IconBtn(onClick: () {}, icon: Icons.more_vert),
-              SizedBox(height: 16),
-              SeeAllBtn(),
-              SizedBox(height: 16),
-              Transaction(),
-              Spacer(),
-            ],
+            children: [Spacer(), SizedBox(height: 16), Transaction(), Spacer()],
           ),
         ),
       ),
