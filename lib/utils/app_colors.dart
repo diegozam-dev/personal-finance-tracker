@@ -57,4 +57,7 @@ class AppColors {
   // See All Button
   static const Color seeAllBtnDefault = white;
   static const Color seeAllBtnLabel = primary;
+
+  // Surface
+  static const Color surfaceLight = white;
 }
