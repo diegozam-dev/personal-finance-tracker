@@ -37,7 +37,6 @@ class Transaction extends StatelessWidget {
                 Container(
                   width: 40,
                   height: 40,
-                  // color: AppColors.accentPurple,
                   decoration: BoxDecoration(
                     color: AppColors.accentPurple,
                     borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -45,7 +44,6 @@ class Transaction extends StatelessWidget {
                 ),
                 SizedBox(width: 8),
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
@@ -56,6 +54,7 @@ class Transaction extends StatelessWidget {
                         color: AppColors.textPrimary,
                       ),
                     ),
+                    SizedBox(height: 4),
                     Text(
                       "New brand mobile",
                       style: TextStyle(
@@ -79,6 +78,7 @@ class Transaction extends StatelessWidget {
                     color: AppColors.accentRed,
                   ),
                 ),
+                SizedBox(height: 4),
                 Text(
                   "May 05",
                   style: TextStyle(
