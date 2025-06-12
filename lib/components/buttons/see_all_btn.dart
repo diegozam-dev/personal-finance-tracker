@@ -1,4 +1,5 @@
 import 'package:caply/utils/app_colors.dart';
+import 'package:caply/utils/app_icon_sizes.dart';
 import 'package:caply/utils/app_text_sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +9,7 @@ class SeeAllBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      height: 36,
       child: TextButton(
         onPressed: () {},
         style: ButtonStyle(
@@ -22,8 +24,8 @@ class SeeAllBtn extends StatelessWidget {
                 fontWeight: FontWeight.normal,
               ),
             ),
-            SizedBox(width: 8),
-            Icon(Icons.arrow_forward),
+            SizedBox(width: 4),
+            Icon(Icons.arrow_forward, size: AppIconSizes.small),
           ],
         ),
       ),

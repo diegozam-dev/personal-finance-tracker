@@ -17,8 +17,8 @@ class IconBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 52,
-      width: 52,
+      height: 44,
+      width: 44,
       child: IconButton(
         onPressed: onClick,
         icon: Icon(icon, size: AppIconSizes.large),
