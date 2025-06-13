@@ -20,7 +20,14 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: Column(
-            children: [Spacer(), SizedBox(height: 16), Transaction(), Spacer()],
+            children: [
+              Spacer(),
+              SizedBox(height: 16),
+              Transaction(),
+              SizedBox(height: 16),
+              IconBtn(onClick: () {}, icon: Icons.abc),
+              Spacer(),
+            ],
           ),
         ),
       ),
