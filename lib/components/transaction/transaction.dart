@@ -1,19 +1,26 @@
+import 'package:caply/schemes/category_scheme.dart';
 import 'package:caply/utils/app_colors.dart';
+import 'package:caply/utils/app_date.dart';
+import 'package:caply/utils/app_icon_sizes.dart';
 import 'package:caply/utils/app_text_sizes.dart';
 import 'package:flutter/material.dart';
 
 class Transaction extends StatelessWidget {
-  // final String category;
-  // final String description;
-  // final double value;
-  // final DateTime date;
+  final int id;
+  final String type;
+  final double amount;
+  final CategoryScheme category;
+  final String description;
+  final DateTime createdAt;
 
   const Transaction({
     super.key,
-    // required this.category,
-    // required this.description,
-    // required this.value,
-    // required this.date,
+    required this.id,
+    required this.type,
+    required this.amount,
+    required this.category,
+    required this.description,
+    required this.createdAt,
   });
 
   @override
@@ -41,13 +48,20 @@ class Transaction extends StatelessWidget {
                     color: AppColors.accentPurple,
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                   ),
+                  child: Icon(
+                    IconData(
+                      category.iconCodePoint,
+                      fontFamily: 'MaterialIcons',
+                    ),
+                    size: AppIconSizes.large,
+                  ),
                 ),
                 SizedBox(width: 8),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Shopping",
+                      category.name,
                       style: TextStyle(
                         fontSize: AppTextSizes.medium,
                         fontWeight: FontWeight.w900,
@@ -55,12 +69,17 @@ class Transaction extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 4),
-                    Text(
-                      "New brand mobile",
-                      style: TextStyle(
-                        fontSize: AppTextSizes.small,
-                        fontWeight: FontWeight.normal,
-                        color: AppColors.textLight,
+                    Container(
+                      constraints: BoxConstraints(maxWidth: 200),
+                      child: Text(
+                        description,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: AppTextSizes.small,
+                          fontWeight: FontWeight.normal,
+                          color: AppColors.textLight,
+                        ),
                       ),
                     ),
                   ],
@@ -71,7 +90,7 @@ class Transaction extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "-\$550",
+                  "-\$$amount",
                   style: TextStyle(
                     fontSize: AppTextSizes.medium,
                     fontWeight: FontWeight.w900,
@@ -80,7 +99,7 @@ class Transaction extends StatelessWidget {
                 ),
                 SizedBox(height: 4),
                 Text(
-                  "May 05",
+                  AppDate.getRelativeTime(createdAt),
                   style: TextStyle(
                     fontSize: AppTextSizes.small,
                     fontWeight: FontWeight.normal,

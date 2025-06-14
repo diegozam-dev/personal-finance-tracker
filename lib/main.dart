@@ -5,6 +5,7 @@ import 'package:caply/components/headings/h1.dart';
 import 'package:caply/components/headings/h2.dart';
 import 'package:caply/components/headings/h3.dart';
 import 'package:caply/components/transaction/transaction.dart';
+import 'package:caply/schemes/category_scheme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +17,8 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int iconId = Icons.access_alarm.codePoint;
+
     return MaterialApp(
       home: Scaffold(
         body: Center(
@@ -23,9 +26,27 @@ class MainApp extends StatelessWidget {
             children: [
               Spacer(),
               SizedBox(height: 16),
-              Transaction(),
+              Transaction(
+                id: 5,
+                amount: 500,
+                type: 'Income',
+                description: 'Pago por servicios prestados',
+                createdAt: DateTime.now(),
+                category: CategoryScheme(
+                  id: 2,
+                  type: 'Income',
+                  name: 'Tecnópolis',
+                  iconCodePoint: 57400,
+                  hexColor: 0xFF9C2BAD,
+                ),
+              ),
               SizedBox(height: 16),
-              IconBtn(onClick: () {}, icon: Icons.abc),
+              IconBtn(
+                onClick: () {
+                  print(iconId);
+                },
+                icon: IconData(iconId, fontFamily: 'MaterialIcons'),
+              ),
               Spacer(),
             ],
           ),
