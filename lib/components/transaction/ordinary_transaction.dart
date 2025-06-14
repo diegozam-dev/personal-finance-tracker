@@ -3,9 +3,10 @@ import 'package:caply/utils/app_colors.dart';
 import 'package:caply/utils/app_date.dart';
 import 'package:caply/utils/app_icon_sizes.dart';
 import 'package:caply/utils/app_text_sizes.dart';
+import 'package:caply/utils/transaction_types.dart';
 import 'package:flutter/material.dart';
 
-class Transaction extends StatelessWidget {
+class OrdinaryTransaction extends StatelessWidget {
   final int id;
   final String type;
   final double amount;
@@ -13,7 +14,7 @@ class Transaction extends StatelessWidget {
   final String description;
   final DateTime createdAt;
 
-  const Transaction({
+  const OrdinaryTransaction({
     super.key,
     required this.id,
     required this.type,
@@ -25,6 +26,8 @@ class Transaction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String signe = type == TransactionTypes.expense ? '-' : '+';
+
     return SizedBox(
       width: double.infinity,
       child: FilledButton(
@@ -90,11 +93,13 @@ class Transaction extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "-\$$amount",
+                  "$signe\$$amount",
                   style: TextStyle(
                     fontSize: AppTextSizes.medium,
                     fontWeight: FontWeight.w900,
-                    color: AppColors.accentRed,
+                    color: type == TransactionTypes.expense
+                        ? AppColors.accentRed
+                        : AppColors.accentGreen,
                   ),
                 ),
                 SizedBox(height: 4),

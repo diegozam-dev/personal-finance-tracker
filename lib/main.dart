@@ -4,7 +4,7 @@ import 'package:caply/components/buttons/see_all_btn.dart';
 import 'package:caply/components/headings/h1.dart';
 import 'package:caply/components/headings/h2.dart';
 import 'package:caply/components/headings/h3.dart';
-import 'package:caply/components/transaction/transaction.dart';
+import 'package:caply/components/transaction/ordinary_transaction.dart';
 import 'package:caply/schemes/category_scheme.dart';
 import 'package:flutter/material.dart';
 
@@ -26,15 +26,15 @@ class MainApp extends StatelessWidget {
             children: [
               Spacer(),
               SizedBox(height: 16),
-              Transaction(
+              OrdinaryTransaction(
                 id: 5,
                 amount: 500,
-                type: 'Income',
+                type: 'Expense',
                 description: 'Pago por servicios prestados',
                 createdAt: DateTime.now(),
                 category: CategoryScheme(
                   id: 2,
-                  type: 'Income',
+                  type: 'Expense',
                   name: 'Tecnópolis',
                   iconCodePoint: 57400,
                   hexColor: 0xFF9C2BAD,
@@ -42,9 +42,7 @@ class MainApp extends StatelessWidget {
               ),
               SizedBox(height: 16),
               IconBtn(
-                onClick: () {
-                  print(iconId);
-                },
+                onClick: () {},
                 icon: IconData(iconId, fontFamily: 'MaterialIcons'),
               ),
               Spacer(),
