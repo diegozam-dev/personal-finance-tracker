@@ -29,12 +29,12 @@ class MainApp extends StatelessWidget {
               OrdinaryTransaction(
                 id: 5,
                 amount: 500,
-                type: 'Expense',
+                type: 'Income',
                 description: 'Pago por servicios prestados',
                 createdAt: DateTime.now(),
                 category: CategoryScheme(
                   id: 2,
-                  type: 'Expense',
+                  type: 'Income',
                   name: 'Tecnópolis',
                   iconCodePoint: 57400,
                   hexColor: 0xFF9C2BAD,

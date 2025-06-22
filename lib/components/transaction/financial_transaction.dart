@@ -6,7 +6,7 @@ import 'package:caply/utils/app_text_sizes.dart';
 import 'package:caply/utils/transaction_types.dart';
 import 'package:flutter/material.dart';
 
-class OrdinaryTransaction extends StatelessWidget {
+class FinancialTransaction extends StatelessWidget {
   final int id;
   final String type;
   final double amount;
@@ -14,7 +14,7 @@ class OrdinaryTransaction extends StatelessWidget {
   final String description;
   final DateTime createdAt;
 
-  const OrdinaryTransaction({
+  const FinancialTransaction({
     super.key,
     required this.id,
     required this.type,
