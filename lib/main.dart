@@ -4,7 +4,7 @@ import 'package:caply/components/buttons/see_all_btn.dart';
 import 'package:caply/components/headings/h1.dart';
 import 'package:caply/components/headings/h2.dart';
 import 'package:caply/components/headings/h3.dart';
-import 'package:caply/components/transaction/ordinary_transaction.dart';
+import 'package:caply/components/transaction/financial_transaction.dart';
 import 'package:caply/schemes/category_scheme.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +26,7 @@ class MainApp extends StatelessWidget {
             children: [
               Spacer(),
               SizedBox(height: 16),
-              OrdinaryTransaction(
+              FinancialTransaction(
                 id: 5,
                 amount: 500,
                 type: 'Income',
