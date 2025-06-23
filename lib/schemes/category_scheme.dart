@@ -1,15 +1,20 @@
+import 'package:caply/schemes/user_scheme.dart';
+
 class CategoryScheme {
-  final int id;
-  String type;
+  final int categoryId;
+  final UserScheme? user;
   String name;
-  int iconCodePoint;
-  int hexColor;
+  String type;
+  int icon;
+  int color;
+  String syncStatus = 'false';
 
   CategoryScheme({
-    required this.id,
+    required this.categoryId,
+    this.user,
     required this.type,
     required this.name,
-    required this.iconCodePoint,
-    required this.hexColor,
+    required this.icon,
+    required this.color,
   });
 }
