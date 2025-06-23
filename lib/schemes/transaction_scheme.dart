@@ -1,17 +1,16 @@
-class TransactionScheme {
-  final int id;
+abstract class TransactionScheme {
+  final int transactionId;
   String type;
   double amount;
   DateTime date;
-  String currency = 'USD'; // EUR -> Euro
+  String currency; // -> [USD, EUR]
   bool isDeleted = false;
-  String description;
 
   TransactionScheme({
-    required this.id,
+    required this.transactionId,
     required this.type,
     required this.amount,
     required this.date,
-    required this.description,
+    required this.currency,
   });
 }
