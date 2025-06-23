@@ -1,18 +1,17 @@
-import 'package:caply/schemes/user_scheme.dart';
-
 class NotificationScheme {
   final int notificationId;
-  UserScheme user;
+  final int? userId;
   String title;
   String? description;
   String state;
-  String syncStatus = 'false';
+  String? syncStatus = 'syncPending';
 
   NotificationScheme({
     required this.notificationId,
-    required this.user,
+    this.userId,
     required this.title,
     this.description,
     required this.state,
+    this.syncStatus,
   });
 }

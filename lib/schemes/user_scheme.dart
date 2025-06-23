@@ -3,19 +3,21 @@ class UserScheme {
   String firstname;
   String lastname;
   String username;
+  String avatarUrl;
   String email;
   String password;
-  double wallet = 0;
-  bool isVerified = false;
-  String avatarUrl;
+  double? wallet = 0;
+  bool? isVerified = false;
 
   UserScheme({
     required this.id,
     required this.firstname,
     required this.lastname,
     required this.username,
+    required this.avatarUrl,
     required this.email,
     required this.password,
-    required this.avatarUrl,
+    this.wallet,
+    this.isVerified,
   });
 }

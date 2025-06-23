@@ -52,12 +52,8 @@ class FinancialTransaction extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                   ),
                   child: Icon(
-                    IconData(
-                      category.iconCodePoint,
-                      fontFamily: 'MaterialIcons',
-                    ),
-                    size: AppIconSizes.large,
-                  ),
+                    Icons.abc,
+                  ), // Cambiar por le ícono de category mediante map
                 ),
                 SizedBox(width: 8),
                 Column(

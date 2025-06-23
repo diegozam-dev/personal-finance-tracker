@@ -4,7 +4,7 @@ abstract class TransactionScheme {
   double amount;
   DateTime date;
   String currency; // -> [USD, EUR]
-  bool isDeleted = false;
+  bool? isDeleted = false;
 
   TransactionScheme({
     required this.transactionId,
@@ -12,5 +12,6 @@ abstract class TransactionScheme {
     required this.amount,
     required this.date,
     required this.currency,
+    this.isDeleted,
   });
 }

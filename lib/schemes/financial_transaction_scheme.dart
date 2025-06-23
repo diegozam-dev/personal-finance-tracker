@@ -1,11 +1,10 @@
-import 'package:caply/schemes/category_scheme.dart';
 import 'package:caply/schemes/transaction_scheme.dart';
 
 class FinancialTransactionScheme extends TransactionScheme {
   final int financialTransactionId;
-  CategoryScheme category;
+  int categoryId;
   String description;
-  String syncStatus = 'false';
+  String? syncStatus = 'syncPending';
 
   FinancialTransactionScheme({
     required super.transactionId,
@@ -14,7 +13,8 @@ class FinancialTransactionScheme extends TransactionScheme {
     required super.date,
     required super.currency,
     required this.financialTransactionId,
-    required this.category,
+    required this.categoryId,
     required this.description,
+    this.syncStatus,
   });
 }

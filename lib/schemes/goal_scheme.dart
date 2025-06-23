@@ -1,8 +1,6 @@
-import 'package:caply/schemes/user_scheme.dart';
-
 class GoalScheme {
   final int goalId;
-  UserScheme user;
+  final int userId;
   String name;
   double goalAmount;
   double savedAmount;
@@ -11,11 +9,11 @@ class GoalScheme {
   String? color;
   DateTime? targetDate;
   String state;
-  String syncStatus = 'false';
+  String? syncStatus = 'syncPending';
 
   GoalScheme({
     required this.goalId,
-    required this.user,
+    required this.userId,
     required this.name,
     required this.goalAmount,
     required this.savedAmount,
@@ -24,5 +22,6 @@ class GoalScheme {
     this.color,
     required this.targetDate,
     required this.state,
+    this.syncStatus,
   });
 }
