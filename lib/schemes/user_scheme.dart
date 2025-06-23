@@ -7,7 +7,6 @@ class UserScheme {
   String password;
   double wallet = 0;
   bool isVerified = false;
-  int appPreferencesId;
   String avatarUrl;
 
   UserScheme({
@@ -17,7 +16,6 @@ class UserScheme {
     required this.username,
     required this.email,
     required this.password,
-    required this.appPreferencesId,
     required this.avatarUrl,
   });
 }
