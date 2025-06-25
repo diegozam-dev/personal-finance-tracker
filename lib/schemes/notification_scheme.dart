@@ -4,7 +4,6 @@ class NotificationScheme {
   String title;
   String? description;
   String state;
-  String? syncStatus = 'syncPending';
 
   NotificationScheme({
     required this.notificationId,
@@ -12,6 +11,5 @@ class NotificationScheme {
     required this.title,
     this.description,
     required this.state,
-    this.syncStatus,
   });
 }

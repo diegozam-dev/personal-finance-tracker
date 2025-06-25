@@ -9,7 +9,6 @@ class GoalScheme {
   String? color;
   DateTime? targetDate;
   String state;
-  String? syncStatus = 'syncPending';
 
   GoalScheme({
     required this.goalId,
@@ -22,6 +21,5 @@ class GoalScheme {
     this.color,
     required this.targetDate,
     required this.state,
-    this.syncStatus,
   });
 }

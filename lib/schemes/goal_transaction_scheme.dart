@@ -3,7 +3,6 @@ import 'package:caply/schemes/transaction_scheme.dart';
 class GoalTransactionScheme extends TransactionScheme {
   final int goalId;
   double currentProgress;
-  String? syncStatus = 'syncPending';
 
   GoalTransactionScheme({
     required super.transactionId,
@@ -13,6 +12,5 @@ class GoalTransactionScheme extends TransactionScheme {
     required super.currency,
     required this.goalId,
     required this.currentProgress,
-    this.syncStatus,
   });
 }

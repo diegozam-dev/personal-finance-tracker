@@ -5,7 +5,6 @@ class CategoryScheme {
   String type;
   String icon;
   String color;
-  String? syncStatus = 'syncPending';
 
   CategoryScheme({
     required this.categoryId,
@@ -14,6 +13,5 @@ class CategoryScheme {
     required this.name,
     required this.icon,
     required this.color,
-    this.syncStatus,
   });
 }

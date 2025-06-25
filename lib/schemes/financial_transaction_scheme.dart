@@ -4,7 +4,6 @@ class FinancialTransactionScheme extends TransactionScheme {
   final int financialTransactionId;
   int categoryId;
   String description;
-  String? syncStatus = 'syncPending';
 
   FinancialTransactionScheme({
     required super.transactionId,
@@ -15,6 +14,5 @@ class FinancialTransactionScheme extends TransactionScheme {
     required this.financialTransactionId,
     required this.categoryId,
     required this.description,
-    this.syncStatus,
   });
 }
