@@ -1,4 +1,4 @@
-class GoalScheme {
+class GoalModel {
   final int goalId;
   final int userId;
   String name;
@@ -8,9 +8,9 @@ class GoalScheme {
   String? icon;
   String? color;
   DateTime? targetDate;
-  String state;
+  String state; // -> In progress - Completed - Expired - Canceled
 
-  GoalScheme({
+  GoalModel({
     required this.goalId,
     required this.userId,
     required this.name,

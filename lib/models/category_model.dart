@@ -1,12 +1,12 @@
-class CategoryScheme {
+class CategoryModel {
   final int categoryId;
   final int? userId;
   String name;
-  String type;
+  String type; // -> Exprense - Income
   String icon;
   String color;
 
-  CategoryScheme({
+  CategoryModel({
     required this.categoryId,
     this.userId,
     required this.type,

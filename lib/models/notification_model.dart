@@ -1,11 +1,11 @@
-class NotificationScheme {
+class NotificationModel {
   final int notificationId;
   final int? userId;
   String title;
   String? description;
-  String state;
+  String state; // -> Read - Unread
 
-  NotificationScheme({
+  NotificationModel({
     required this.notificationId,
     this.userId,
     required this.title,

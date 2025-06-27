@@ -1,7 +1,6 @@
-import 'package:caply/schemes/category_scheme.dart';
+import 'package:caply/models/category_model.dart';
 import 'package:caply/utils/app_colors.dart';
 import 'package:caply/utils/app_date.dart';
-import 'package:caply/utils/app_icon_sizes.dart';
 import 'package:caply/utils/app_text_sizes.dart';
 import 'package:caply/utils/transaction_types.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +9,7 @@ class FinancialTransaction extends StatelessWidget {
   final int id;
   final String type;
   final double amount;
-  final CategoryScheme category;
+  final CategoryModel category;
   final String description;
   final DateTime createdAt;
 

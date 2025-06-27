@@ -5,7 +5,7 @@ import 'package:caply/components/headings/h1.dart';
 import 'package:caply/components/headings/h2.dart';
 import 'package:caply/components/headings/h3.dart';
 import 'package:caply/components/transaction/financial_transaction.dart';
-import 'package:caply/schemes/category_scheme.dart';
+import 'package:caply/models/category_model.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,7 +32,7 @@ class MainApp extends StatelessWidget {
                 type: 'Income',
                 description: 'Pago por servicios prestados',
                 createdAt: DateTime.now(),
-                category: CategoryScheme(
+                category: CategoryModel(
                   categoryId: 2,
                   type: 'Income',
                   name: 'Tecnópolis',

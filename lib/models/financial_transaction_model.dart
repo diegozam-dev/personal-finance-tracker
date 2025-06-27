@@ -1,12 +1,15 @@
-import 'package:caply/schemes/transaction_scheme.dart';
+import 'package:caply/models/tag_model.dart';
+import 'package:caply/models/transaction_model.dart';
 
-class FinancialTransactionScheme extends TransactionScheme {
+class FinancialTransactionModel extends TransactionModel {
   final int financialTransactionId;
   int categoryId;
   String description;
+  final List<TagModel> tags;
 
-  FinancialTransactionScheme({
+  FinancialTransactionModel({
     required super.transactionId,
+    required super.userId,
     required super.type,
     required super.amount,
     required super.date,
@@ -14,5 +17,6 @@ class FinancialTransactionScheme extends TransactionScheme {
     required this.financialTransactionId,
     required this.categoryId,
     required this.description,
+    required this.tags,
   });
 }
