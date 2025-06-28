@@ -19,7 +19,7 @@ class GoalModel {
     this.imageUrl,
     this.icon,
     this.color,
-    required this.targetDate,
+    this.targetDate,
     required this.state,
   });
 }
