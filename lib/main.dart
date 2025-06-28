@@ -5,7 +5,9 @@ import 'package:caply/components/headings/h1.dart';
 import 'package:caply/components/headings/h2.dart';
 import 'package:caply/components/headings/h3.dart';
 import 'package:caply/components/transaction/financial_transaction.dart';
+import 'package:caply/components/transaction/goal_transaction.dart';
 import 'package:caply/models/category_model.dart';
+import 'package:caply/models/goal_model.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,7 +33,7 @@ class MainApp extends StatelessWidget {
                 amount: 500,
                 type: 'Income',
                 description: 'Pago por servicios prestados',
-                createdAt: DateTime.now(),
+                date: DateTime.now(),
                 category: CategoryModel(
                   categoryId: 2,
                   type: 'Income',
@@ -41,9 +43,21 @@ class MainApp extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 16),
-              IconBtn(
-                onClick: () {},
-                icon: IconData(iconId, fontFamily: 'MaterialIcons'),
+              GoalTransaction(
+                id: 5,
+                amount: 50,
+                type: 'Goal',
+                date: DateTime.now(),
+                goal: GoalModel(
+                  goalId: 1,
+                  userId: 1,
+                  name: 'PC Gamer',
+                  goalAmount: 800,
+                  savedAmount: 200,
+                  state: 'in progress',
+                  imageUrl:
+                      'https://www.bestcell.com.ec/img/cotiza-pc-gamer-oficina.webp',
+                ),
               ),
               Spacer(),
             ],
