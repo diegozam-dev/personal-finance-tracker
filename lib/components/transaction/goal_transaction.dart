@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:caply/models/goal_model.dart';
 import 'package:caply/utils/app_colors.dart';
 import 'package:caply/utils/app_date.dart';
