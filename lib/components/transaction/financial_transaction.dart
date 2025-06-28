@@ -11,7 +11,7 @@ class FinancialTransaction extends StatelessWidget {
   final double amount;
   final CategoryModel category;
   final String description;
-  final DateTime createdAt;
+  final DateTime date;
 
   const FinancialTransaction({
     super.key,
@@ -20,7 +20,7 @@ class FinancialTransaction extends StatelessWidget {
     required this.amount,
     required this.category,
     required this.description,
-    required this.createdAt,
+    required this.date,
   });
 
   @override
@@ -99,7 +99,7 @@ class FinancialTransaction extends StatelessWidget {
                 ),
                 SizedBox(height: 4),
                 Text(
-                  AppDate.getRelativeTime(createdAt),
+                  AppDate.getRelativeTime(date),
                   style: TextStyle(
                     fontSize: AppTextSizes.small,
                     fontWeight: FontWeight.normal,
