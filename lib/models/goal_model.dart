@@ -1,3 +1,5 @@
+import 'package:caply/utils/goal_states.dart';
+
 class GoalModel {
   final int goalId;
   final int userId;
@@ -8,7 +10,7 @@ class GoalModel {
   String? icon;
   String? color;
   DateTime? targetDate;
-  String state; // -> In progress - Completed - Expired - Canceled
+  GoalStates state;
 
   GoalModel({
     required this.goalId,
