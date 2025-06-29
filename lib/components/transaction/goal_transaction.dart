@@ -1,6 +1,7 @@
 import 'package:caply/models/goal_model.dart';
 import 'package:caply/utils/app_colors.dart';
 import 'package:caply/utils/app_date.dart';
+import 'package:caply/utils/app_icon_sizes.dart';
 import 'package:caply/utils/app_text_sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -51,6 +52,7 @@ class GoalTransaction extends StatelessWidget {
                         ),
                         child: Icon(
                           Icons.abc,
+                          size: AppIconSizes.large,
                         ), // Cambiar por le ícono de goal mediante map
                       )
                     : SizedBox(
@@ -77,7 +79,6 @@ class GoalTransaction extends StatelessWidget {
                         color: AppColors.textPrimary,
                       ),
                     ),
-                    SizedBox(height: 4),
                     Container(
                       constraints: BoxConstraints(maxWidth: 200),
                       child: Text(
@@ -106,7 +107,6 @@ class GoalTransaction extends StatelessWidget {
                     color: AppColors.accentGreen,
                   ),
                 ),
-                SizedBox(height: 4),
                 Text(
                   AppDate.getRelativeTime(date),
                   style: TextStyle(

@@ -1,6 +1,7 @@
 import 'package:caply/models/category_model.dart';
 import 'package:caply/utils/app_colors.dart';
 import 'package:caply/utils/app_date.dart';
+import 'package:caply/utils/app_icon_sizes.dart';
 import 'package:caply/utils/app_text_sizes.dart';
 import 'package:caply/utils/transaction_types.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +52,8 @@ class FinancialTransaction extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                   ),
                   child: Icon(
-                    Icons.abc,
+                    Icons.shopping_bag,
+                    size: AppIconSizes.large,
                   ), // Cambiar por le ícono de category mediante map
                 ),
                 SizedBox(width: 8),
@@ -66,9 +68,8 @@ class FinancialTransaction extends StatelessWidget {
                         color: AppColors.textPrimary,
                       ),
                     ),
-                    SizedBox(height: 4),
                     Container(
-                      constraints: BoxConstraints(maxWidth: 200),
+                      constraints: BoxConstraints(maxWidth: 220),
                       child: Text(
                         description,
                         maxLines: 1,
@@ -97,7 +98,6 @@ class FinancialTransaction extends StatelessWidget {
                         : AppColors.accentGreen,
                   ),
                 ),
-                SizedBox(height: 4),
                 Text(
                   AppDate.getRelativeTime(date),
                   style: TextStyle(
