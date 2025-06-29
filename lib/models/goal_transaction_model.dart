@@ -1,4 +1,5 @@
 import 'package:caply/models/transaction_model.dart';
+import 'package:caply/utils/transaction_types.dart';
 
 class GoalTransactionModel extends TransactionModel {
   final int goalId;
@@ -6,7 +7,7 @@ class GoalTransactionModel extends TransactionModel {
   GoalTransactionModel({
     required super.transactionId,
     required super.userId,
-    required super.type,
+    super.type = TransactionTypes.goal,
     required super.amount,
     required super.date,
     required super.currency,
