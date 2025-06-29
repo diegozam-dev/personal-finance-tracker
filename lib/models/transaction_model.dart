@@ -1,7 +1,9 @@
+import 'package:caply/utils/transaction_types.dart';
+
 abstract class TransactionModel {
   final int transactionId;
   final int userId;
-  String type; // -> Expense - Income - Goal
+  TransactionTypes type; // -> Expense - Income - Goal
   double amount;
   DateTime date;
   String currency; // -> USD - EUR
