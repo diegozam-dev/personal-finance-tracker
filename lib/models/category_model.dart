@@ -1,8 +1,10 @@
+import 'package:caply/utils/category_types.dart';
+
 class CategoryModel {
   final int categoryId;
   final int? userId;
   String name;
-  String type; // -> Exprense - Income
+  CategoryTypes type; // -> Exprense - Income
   String icon;
   String color;
 
