@@ -1,13 +1,16 @@
 import 'package:caply/models/goal_model.dart';
+import 'package:caply/utils/app_accent_colors.dart';
 import 'package:caply/utils/app_colors.dart';
-import 'package:caply/utils/app_date.dart';
+import 'package:caply/utils/app_date_utils.dart';
 import 'package:caply/utils/app_icon_sizes.dart';
+import 'package:caply/utils/app_icons.dart';
 import 'package:caply/utils/app_text_sizes.dart';
+import 'package:caply/utils/transaction_types.dart';
 import 'package:flutter/material.dart';
 
 class GoalTransaction extends StatelessWidget {
   final int id;
-  final String type;
+  final TransactionTypes type = TransactionTypes.goal;
   final double amount;
   final GoalModel goal;
   final DateTime date;
@@ -15,7 +18,6 @@ class GoalTransaction extends StatelessWidget {
   const GoalTransaction({
     super.key,
     required this.id,
-    required this.type,
     required this.amount,
     required this.goal,
     required this.date,
@@ -46,12 +48,11 @@ class GoalTransaction extends StatelessWidget {
                         width: 40,
                         height: 40,
                         decoration: BoxDecoration(
-                          color: AppColors
-                              .accentPurple, // Cambiar por el color de goal mediante map
+                          color: getAccentColorByName(goal.color!),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Icon(
-                          Icons.abc,
+                          getIconByName(goal.icon!),
                           size: AppIconSizes.large,
                         ), // Cambiar por le ícono de goal mediante map
                       )
@@ -61,8 +62,7 @@ class GoalTransaction extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8),
                           child: Image.network(
-                            goal.imageUrl ??
-                                'https://img.freepik.com/vector-premium/icono-marco-fotos-foto-vacia-blanco-vector-sobre-fondo-transparente-aislado-eps-10_399089-1290.jpg',
+                            goal.imageUrl!,
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -108,7 +108,7 @@ class GoalTransaction extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  AppDate.getRelativeTime(date),
+                  AppDateUtils.getRelativeTime(date),
                   style: TextStyle(
                     fontSize: AppTextSizes.small,
                     fontWeight: FontWeight.normal,

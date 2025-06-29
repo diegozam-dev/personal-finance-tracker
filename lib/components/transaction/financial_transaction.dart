@@ -1,14 +1,16 @@
 import 'package:caply/models/category_model.dart';
+import 'package:caply/utils/app_accent_colors.dart';
 import 'package:caply/utils/app_colors.dart';
-import 'package:caply/utils/app_date.dart';
+import 'package:caply/utils/app_date_utils.dart';
 import 'package:caply/utils/app_icon_sizes.dart';
+import 'package:caply/utils/app_icons.dart';
 import 'package:caply/utils/app_text_sizes.dart';
 import 'package:caply/utils/transaction_types.dart';
 import 'package:flutter/material.dart';
 
 class FinancialTransaction extends StatelessWidget {
   final int id;
-  final String type;
+  final TransactionTypes type;
   final double amount;
   final CategoryModel category;
   final String description;
@@ -48,11 +50,11 @@ class FinancialTransaction extends StatelessWidget {
                   width: 40,
                   height: 40,
                   decoration: BoxDecoration(
-                    color: AppColors.accentPurple,
+                    color: getAccentColorByName(category.color),
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                   ),
                   child: Icon(
-                    Icons.shopping_bag,
+                    getIconByName(category.icon),
                     size: AppIconSizes.large,
                   ), // Cambiar por le ícono de category mediante map
                 ),
@@ -99,7 +101,7 @@ class FinancialTransaction extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  AppDate.getRelativeTime(date),
+                  AppDateUtils.getRelativeTime(date),
                   style: TextStyle(
                     fontSize: AppTextSizes.small,
                     fontWeight: FontWeight.normal,
