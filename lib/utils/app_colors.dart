@@ -60,4 +60,7 @@ class AppColors {
 
   // Surface
   static const Color surfaceLight = white;
+
+  // Others
+  static const Color divider = gray3;
 }
