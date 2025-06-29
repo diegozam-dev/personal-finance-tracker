@@ -56,7 +56,7 @@ class FinancialTransaction extends StatelessWidget {
                   child: Icon(
                     getIconByName(category.icon),
                     size: AppIconSizes.large,
-                  ), // Cambiar por le ícono de category mediante map
+                  ),
                 ),
                 SizedBox(width: 8),
                 Column(

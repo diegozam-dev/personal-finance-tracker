@@ -54,7 +54,7 @@ class GoalTransaction extends StatelessWidget {
                         child: Icon(
                           getIconByName(goal.icon!),
                           size: AppIconSizes.large,
-                        ), // Cambiar por le ícono de goal mediante map
+                        ),
                       )
                     : SizedBox(
                         width: 40,
