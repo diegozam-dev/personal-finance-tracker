@@ -1,4 +1,4 @@
-class AppDate {
+class AppDateUtils {
   static String getRelativeTime(DateTime dateTime) {
     DateTime now = DateTime.now();
     Duration difference = now.difference(dateTime);
