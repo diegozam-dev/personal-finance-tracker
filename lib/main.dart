@@ -1,4 +1,5 @@
 import 'package:caply/components/buttons/icon_btn.dart';
+import 'package:caply/components/buttons/outline_btn.dart';
 import 'package:caply/components/buttons/primary_button.dart';
 import 'package:caply/components/buttons/see_all_btn.dart';
 import 'package:caply/components/containers/item_list_with_separator.dart';
@@ -10,6 +11,7 @@ import 'package:caply/components/transaction/goal_transaction.dart';
 import 'package:caply/models/category_model.dart';
 import 'package:caply/models/goal_model.dart';
 import 'package:caply/utils/app_accent_colors.dart';
+import 'package:caply/utils/app_colors.dart';
 import 'package:caply/utils/category_types.dart';
 import 'package:caply/utils/goal_states.dart';
 import 'package:caply/utils/transaction_types.dart';
@@ -77,7 +79,13 @@ class MainApp extends StatelessWidget {
           child: Column(
             children: [
               Spacer(),
-
+              OutlineBtn(
+                onClick: () {},
+                label: 'Outline Button',
+                icon: Icons.add,
+                color: AppColors.accentRed,
+              ),
+              SizedBox(height: 16),
               SizedBox(height: 16),
               Expanded(child: ItemListWithSeparator(items: items)),
               Spacer(),
