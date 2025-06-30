@@ -30,6 +30,8 @@ class AppColors {
   static const Color green11 = Color(0xFF18794E);
   static const Color green12 = Color(0xFF153226);
 
+  static const Color green10_1 = Color(0x10299764);
+
   // Accent
   static const accentGreen = green9;
   static const accentRed = Color(0xFFE54D2E);
@@ -47,6 +49,10 @@ class AppColors {
   // Primary Button
   static const Color primaryBtnDefault = primary;
   static const Color primaryBtnLabel = white;
+
+  // Outline Button
+  static const Color outlineBtnDefault = primary;
+  static const Color outlineBtnOverlay = green10_1;
 
   // Icon Button
   static const Color iconBtnDefault = primary;
