@@ -100,7 +100,7 @@ class GoalTransaction extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "\$$amount",
+                  "+\$$amount",
                   style: TextStyle(
                     fontSize: AppTextSizes.medium,
                     fontWeight: FontWeight.w900,
